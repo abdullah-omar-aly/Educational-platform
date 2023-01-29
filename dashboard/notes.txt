@@ -1,0 +1,8 @@
+
+// Primary-dark-bg: #0A1929    darkblue
+// secondary-dark-bg : #001E3C
+//dark-heading-color: white
+// dark-icons-color: #5FA7EF lightblue
+//dark-text-color: #A5AEB7 gray
+///border-color-icons-and-sections(dark): 1px solid rgb(19, 47, 76);
+///border-color-icons-and-sections(light):  1px solid rgb(224, 227, 231);
