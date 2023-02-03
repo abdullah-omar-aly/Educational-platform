@@ -1,11 +1,15 @@
 import './App.css'
+import { ThemeProvider } from '@mui/material/styles';
+
 import {useState} from "react"
-import DashboardLayout from './DashboardLayout';
-import MainContent from './components/mainContent';
-import Sidebar from './components/sidebar';
-import Topbar from './components/topbar';
+import MainContent from './app/screens';
+import Sidebar from './app/sidebar';
+import Topbar from './app/topbar';
+import Layout from './app/layout';
+import { useMuiTheme } from './theme';
 
 function App() {
+  const muiTheme = useMuiTheme()
 
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -14,13 +18,16 @@ function App() {
   };
 
   return(
-    <DashboardLayout
+    <ThemeProvider theme={muiTheme}>
+
+    <Layout
       mobileOpen={mobileOpen}
       handleDrawerToggle={handleDrawerToggle}
       sidebar={<Sidebar />}
       topbar={<Topbar handleDrawerToggle={handleDrawerToggle} />}
       main={<MainContent />}
     />
+    </ThemeProvider>
   )
 }
 

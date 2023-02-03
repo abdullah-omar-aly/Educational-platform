@@ -5,7 +5,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Drawer from "@mui/material/Drawer";
 import Toolbar from "@mui/material/Toolbar";
 
-type DashboardLayoutProps = {
+type LayoutProps = {
   sidebar: React.ReactNode;
   topbar: React.ReactNode;
   main: React.ReactNode;
@@ -15,13 +15,13 @@ type DashboardLayoutProps = {
 
 const drawerWidth = 240;
 
-function DashboardLayout({
+function Layout({
   sidebar,
   topbar,
   main,
   mobileOpen,
   handleDrawerToggle,
-}: DashboardLayoutProps) {
+}: LayoutProps) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -57,7 +57,7 @@ function DashboardLayout({
         >
           {sidebar}
         </Drawer>
-        <Drawer // desktop-sidebar
+        <Drawer //desktop-sidebar
           variant="permanent"
           sx={{
             display: { xs: "none", md: "block" },
@@ -86,4 +86,4 @@ function DashboardLayout({
   );
 }
 
-export default DashboardLayout;
+export default Layout;
